@@ -19,19 +19,19 @@ class DataParser{
 			int i = 0;
 			while (line != null) {
 				retrivedData[i] = line;
-				i++;
 				line = reader.readLine();
+				i++;
 			}
 			reader.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	
 	}
 	
 	public static void getIpAddress(){
 		for(int i = 0; i<=retrivedData.length; i++){
-			ipAddress.add(retrivedData[i].split(" - - ")[0]);
+			ipAddress[i] = retrivedData[i].split(" - - ")[0];
+			System.out.println(ipAddress[i]);
 		}	
 	}
 	
@@ -41,6 +41,7 @@ class DataParser{
 			temp[i] = retrivedData[i].split(" +")[3];
 			temp[i] = temp[i].split(":")[0];
 			dates[i] = temp[i].split("\\[")[1];
+			System.out.println(dates[i]);
 		}
 	}
 	
@@ -48,6 +49,7 @@ class DataParser{
 		String[] temp = new String[20];
 		for(int j = 0; j<retrivedData.length; j++){
 			code[j] = retrivedData[j].split(" +")[8];
+			System.out.println(code[j]);
 		}
 	}
 	
@@ -58,11 +60,9 @@ public static void main(String args[]){
 		
 		getIpAddress();
 		
-		getDates();
+		//getDates();
 		
-		getCode();
-		
-		printData();
+		//getCode();
 		
 	}
 	
