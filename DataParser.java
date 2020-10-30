@@ -42,7 +42,6 @@ class DataParser{
 			temp[i] = temp[i].split(":")[0];
 			dates[i] = temp[i].split("\\[")[1];
 		}
-		
 	}
 	
 	public static void getCode(){
