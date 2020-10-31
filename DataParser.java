@@ -5,7 +5,7 @@ class DataParser{
 	//109.169.248.247 - - [12/Dec/2015:18:25:11 +0100] "GET /administrator/ HTTP/1.1" 200 4263 "-" "Mozilla/5.0 (Windows NT 6.0; rv:34.0) Gecko/20100101 Firefox/34.0" "-"	
 		
 		static List<String> retrivedData = new ArrayList<String>(); //Used Arraylist instead of Array[] due to Indexing issue.
-		static HashSet<String> uniqueIpAddress = new HashSet<String>(); // Used HashSet to Print only Unique Data.
+		static HashSet<String> uniqueIpAddress = new HashSet<String>(); // Used HashSet to Print Unique Data.
 		static HashSet<String> uniqueDates = new HashSet<String>();
 		static HashSet<String> serverCode = new HashSet<String>();
 	
