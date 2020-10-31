@@ -48,16 +48,14 @@ class DataParser{
 		String temp = "";
 		for(String code : retrivedData){
 			temp = code.split(" +")[8];
-			if(temp!="200"){
 				serverCode.add(temp);
-			}
 		}
 	}
 	
 	public static void printData(HashSet<String> printMap){
 		for(String i : printMap){
             System.out.println(i);
-        }
+		}
 	}
 
 public static void main(String args[]){
@@ -70,7 +68,7 @@ public static void main(String args[]){
 		
 		getCode();
 		
-		printData(uniqueIpAddress); // Pass the HashSet uniqueIpAddress, uniqueDates, serverCode to Print
+		printData(serverCode); // Pass the HashSet uniqueIpAddress, uniqueDates, serverCode to Print
 		
 	}
 	
